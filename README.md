@@ -25,3 +25,69 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 | `Font Awesome` | Cung cấp các biểu tượng cho giao diện người dùng (nút điều khiển, mạng xã hội) |
 
 ---
+
+## 🎯 Tính năng nổi bật
+
+- ✨ Giao diện cửa sổ: Mô phỏng một ứng dụng với các nút điều khiển thu nhỏ, phóng to và đóng cửa sổ.
+
+- 🌐 Hỗ trợ song ngữ: 🇻🇳 Tiếng Việt và 🇺🇸 English, với khả năng chuyển đổi tức thì.
+
+- 💡 Chế độ sáng/tối: Tùy chọn chuyển đổi giữa giao diện sáng và tối.
+
+- 🔄 Hiệu ứng chuyển động: Các chuyển động mượt mà khi cửa sổ thay đổi kích thước hoặc khi di chuột qua các phần tử.
+
+- 🖼️ Video nền: Một video phát lặp làm nền cho toàn bộ trang web.
+
+- ✉️ Thông tin liên hệ & Mạng xã hội: Dễ dàng kết nối qua email, số điện thoại và các nền tảng mạng xã hội phổ biến.
+
+---
+
+##📂 Cấu trúc dự án
+
+Root Folder/
+├── Video - Picture/  # Thư mục chứa video nền và ảnh đại diện
+│   ├── Picture.jpg
+│   └── video-background.mp4
+├── Profile.html      # Tệp HTML chính chứa cấu trúc nội dung
+├── Profile.css       # Tùy chỉnh giao diện, chế độ sáng/tối, hiệu ứng
+└── Profile.js        # Toàn bộ logic điều khiển giao diện tương tác và chuyển đổi ngôn ngữ
+
+---
+
+##🔧 Cách triển khai
+
+###✅ Cách 1: Chạy cục bộ
+
+
+
+###✅ Cách 2: Triển khai lên Internet
+Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
+
+- [GitHub Pages](https://pages.github.com/)
+- [Netlify](https://netlify.com/)
+- [Vercel](https://vercel.com/)
+
+---
+
+##🛡️ Giấy phép
+Dự án này được tạo ra như một hồ sơ cá nhân và phục vụ mục đích giới thiệu kỹ năng.
+
+---
+
+##📬 Liên hệ
+Tác giả: Nguyễn Hữu Giàu
+
+-**Email**: HuuGiau2304@gmail.com
+
+-**GitHub**: NgHuuGiau
+
+-**Facebook**: HuuGiau.2304
+
+-**Instagram**: nguyen_huugiau
+
+-**X (Twitter)**: Nguyen_Huu_Giau
+
+---
+
+##❗️ Lưu ý:
+- Hiện tại giao diện web có thể sẽ bị lỗi đối với mobile
