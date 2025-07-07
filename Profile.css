@@ -446,3 +446,27 @@ body.dark-mode .WebsiteCaNhan {
 body.dark-mode .social-link {
     color: #bbb; /* Màu sáng hơn cho các icon mạng xã hội trong chế độ tối */
 }
+
+/* --- RESPONSIVE ADJUSTMENTS FOR SOCIAL ICONS --- */
+
+/* Điều chỉnh cho màn hình có chiều rộng tối đa 768px (điển hình cho máy tính bảng và một số điện thoại lớn) */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 20px; /* Giảm khoảng cách giữa các biểu tượng */
+    }
+
+    .social-link {
+        font-size: 2.5em; /* Giảm kích thước biểu tượng */
+    }
+}
+
+/* Điều chỉnh thêm cho màn hình có chiều rộng tối đa 480px (điển hình cho điện thoại di động) */
+@media (max-width: 480px) {
+    .social-links {
+        gap: 15px; /* Giảm khoảng cách giữa các biểu tượng hơn nữa */
+    }
+
+    .social-link {
+        font-size: 2em; /* Giảm kích thước biểu tượng hơn nữa để vừa vặn */
+    }
+}
