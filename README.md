@@ -66,8 +66,10 @@ Root Folder/
 
 ### ✅ Cách 1: Chạy cục bộ
 
+```bash
 # Clone hoặc tải xuống các tệp vào một thư mục
 # Mở tệp Profile.html bằng trình duyệt web
+```
 
 ### ✅ Cách 2: Triển khai lên Internet
 Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
