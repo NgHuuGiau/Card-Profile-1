@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyễn Hữu Giàu - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="Profile.css" />
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="Video - Picture/video-background.mp4" type="video/mp4" />
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+    </div>
+
+    <i id="relaunch" class="relaunch-logo fas fa-paper-plane" alt="Logo khởi động lại" onclick="reopenWindow()"></i>
+
+    <div class="window-frame">
+        <div class="window-header">
+            <span id="windowTitle">Nguyễn Hữu Giàu - Profile</span>
+            <div class="window-buttons">
+                <div class="window-button minimize-btn" onclick="minimizeWindow()"></div>
+                <div class="window-button maximize-btn" onclick="toggleMaximizeRestore()"></div>
+                <div class="window-button close-btn" onclick="closeWindow()"></div>
+            </div>
+        </div>
+        
+        <div class="control-buttons">
+            <button id="themeToggle" class="control-button">
+                <i class="fas fa-sun"></i> </button>
+            <button id="langToggle" class="control-button">English</button>
+        </div>
+        
+        <div id="mainContent" class="Body">
+
+            <div class="Trang1 content-section">
+                <h2 class="section-title" data-key="aboutTitle">Giới Thiệu Bản Thân</h2>
+                <p class="section-description" data-key="aboutDesc">Tổng quan về thông tin cá nhân và học vấn của tôi.</p>
+                
+                <img src="Video - Picture/Picture.jpg" alt="Ảnh đại diện Nguyễn Hữu Giàu" class="profile-img" />
+                <div class="info-text">
+                    <h1 class="Ten" data-key="name">Nguyễn Hữu Giàu</h1>
+                    <p class="Nganh" data-key="major">Chuyên ngành Công nghệ Thông tin</p>
+                    <p class="TruongDaiHoc" data-key="university">Đại Học Nguyễn Tất Thành (Viện Quốc Tế)</p>
+                </div>
+            </div>
+
+            <div class="DuAn content-section">
+                <h2 class="section-title" data-key="projectsTitle">Các Dự Án Nổi Bật</h2>
+                <p class="section-description" data-key="projectsDesc">Những dự án cá nhân và nhóm mà tôi đã thực hiện.</p>
+
+                <div class="SUDOKU" data-key="sudokuTitle">SUDOKU</div>
+                <div class="project-desc" data-key="sudokuDesc">
+                    Dự án Sudoku là một trò chơi giải đố kinh điển được phát triển bằng Python, sử dụng thư viện Pygame cho giao diện đồ họa và Tkinter cho màn hình menu. Trò chơi mang đến trải nghiệm thú vị với bảng Sudoku ngẫu nhiên, hỗ trợ người dùng nhập số, kiểm tra tính hợp lệ và thông báo chiến thắng khi hoàn thành.
+                </div>
+
+                <div class="WebsiteCaNhan" data-key="websiteTitle">Website Cá Nhân</div>
+                <div class="project-desc" data-key="websiteDesc">
+                    Website hồ sơ cá nhân là nơi trình bày thông tin, kỹ năng và dự án nổi bật của bạn một cách chuyên nghiệp và hấp dẫn, giúp nhà tuyển dụng dễ dàng tiếp cận hồ sơ của bạn.
+                </div>
+            </div>
+
+            <div class="ThongTinLienHe content-section">
+                <h2 class="section-title" data-key="contactTitle">Liên Hệ & Mạng Xã Hội</h2>
+                <p class="section-description" data-key="contactDesc">Cách tốt nhất để liên lạc và kết nối với tôi.</p>
+
+                <h3 data-key="contactInfoHeading">Thông tin liên hệ</h3>
+                <ul class="contact-list">
+                    <li><strong data-key="emailLabel">Email:</strong> <a href="mailto:HuuGiau2304@gmail.com">HuuGiau2304@gmail.com</a></li>
+                    <li><strong data-key="phoneLabel">Số điện thoại:</strong> +84 XXX XXX XXX</li>
+                    </ul>
+
+                <h3 style="margin-top: 30px; text-align: center;" data-key="socialFollowHeading">Theo dõi tôi trên các nền tảng</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/HuuGiau.2304" class="social-link facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/Nguyen_Huu_Giau" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/nguyen_huugiau/" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/NgHuuGiau" class="social-link github"><i class="fab fa-github"></i></a>
+                    <a href="https://telegram.com" class="social-link telegram"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="Profile.js"></script> 
+</body>
+</html>

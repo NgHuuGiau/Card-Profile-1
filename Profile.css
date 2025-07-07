@@ -1,0 +1,443 @@
+/* Video nền cho toàn bộ trang web */
+.video-background {
+    position: fixed; /* Đặt vị trí cố định trên màn hình, không cuộn cùng nội dung */
+    top: 0; /* Căn trên cùng */
+    left: 0; /* Căn trái cùng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: 100%; /* Chiếm toàn bộ chiều cao màn hình */
+    z-index: -2; /* Đặt lớp video này dưới tất cả các phần tử khác */
+}
+
+/* Định kiểu cho thẻ video bên trong .video-background */
+.video-background video {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của .video-background */
+    height: 100%; /* Chiếm toàn bộ chiều cao của .video-background */
+    object-fit: cover; /* Đảm bảo video lấp đầy toàn bộ khu vực mà không bị méo hoặc có viền đen */
+}
+
+/* Giao diện khung ứng dụng (cửa sổ chính của profile) */
+.window-frame {
+    /* Kiểu cơ bản - luôn được căn giữa trên màn hình */
+    position: fixed; /* Đặt vị trí cố định trên màn hình */
+    top: 50%; /* Dịch chuyển 50% từ trên xuống */
+    left: 50%; /* Dịch chuyển 50% từ trái sang */
+    transform: translate(-50%, -50%); /* Dịch chuyển ngược lại 50% kích thước của chính nó để căn giữa chính xác */
+    transform-origin: center; /* Đảm bảo các hiệu ứng thu phóng và chuyển đổi diễn ra từ trung tâm của phần tử */
+    z-index: 10; /* Đặt lớp này cao hơn video nền để hiển thị trên video */
+    /* Hiệu ứng chuyển động mượt mà cho các thay đổi thuộc tính */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, top 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out, margin 0.3s ease-out, border-radius 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out, border-color 0.3s ease-out;
+    
+    display: block; /* Đảm bảo phần tử hiển thị như một khối */
+    border: 2px solid black; /* Viền đen mặc định cho cửa sổ */
+}
+
+/* Class cho trạng thái thu nhỏ (khi cửa sổ được minimize) */
+.window-frame.minimized {
+    /* Di chuyển xuống giữa dưới màn hình, thu nhỏ và mờ dần */
+    transform: translate(-50%, calc(100vh - 100px)) scale(0.05); /* Di chuyển xuống gần cuối màn hình, sau đó thu nhỏ đáng kể */
+    opacity: 0; /* Làm mờ hoàn toàn cửa sổ */
+    pointer-events: none; /* Ngăn chặn bất kỳ tương tác nào của chuột khi cửa sổ bị thu nhỏ */
+}
+
+/* Class cho trạng thái "khôi phục" (khi cửa sổ ở kích thước nhỏ hơn, không full màn hình) */
+.window-frame.restored {
+    width: 80%; /* Chiều rộng 80% của viewport */
+    max-width: 900px; /* Chiều rộng tối đa là 900px */
+    height: auto; /* Chiều cao tự động điều chỉnh theo nội dung */
+    max-height: calc(100vh - 60px); /* Chiều cao tối đa bằng chiều cao viewport trừ đi 60px (để có khoảng trống) */
+    border-radius: 8px; /* Bo tròn các góc cửa sổ */
+    background: rgba(255, 255, 255, 0.85); /* Nền trắng hơi trong suốt cho chế độ sáng */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ cho cửa sổ */
+    transform: translate(-50%, -50%); /* Đảm bảo vẫn căn giữa khi khôi phục */
+    opacity: 1; /* Hiển thị hoàn toàn cửa sổ */
+    border-color: black; /* Giữ viền đen */
+}
+
+/* Class cho trạng thái "phóng to" (khi cửa sổ full màn hình) */
+.window-frame.maximized {
+    /* Đã điều chỉnh để giữ cửa sổ căn giữa ngay cả khi phóng to */
+    top: 50%; /* Vẫn dịch 50% từ trên xuống */
+    left: 50%; /* Vẫn dịch 50% từ trái sang */
+    transform: translate(-50%, -50%); /* Vẫn căn giữa chính xác */
+
+    width: calc(100vw - 20px); /* Chiếm gần toàn bộ chiều rộng viewport (trừ 20px) */
+    height: calc(100vh - 20px); /* Chiếm gần toàn bộ chiều cao viewport (trừ 20px) */
+    margin: 0; /* Xóa bất kỳ margin nào */
+    border-radius: 8px; /* Bo tròn các góc */
+    background: rgba(255, 255, 255, 0.95); /* Nền trắng gần như không trong suốt cho chế độ sáng */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn khi phóng to */
+    opacity: 1; /* Hiển thị hoàn toàn */
+    border-color: black; /* Giữ viền đen */
+}
+
+/* Trạng thái ban đầu mới cho hoạt ảnh mở lại (khi click nút relaunch, cửa sổ sẽ bật lên từ dưới) */
+.window-frame.initial-reopen-state {
+    top: calc(100vh - 50px); /* Vị trí bắt đầu gần dưới cùng của màn hình */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, 0) scale(0.1); /* Rất nhỏ và căn giữa theo chiều ngang, chưa dịch chuyển theo chiều dọc */
+    opacity: 0; /* Ẩn hoàn toàn khi ở trạng thái này */
+}
+
+
+/* Thanh tiêu đề của cửa sổ */
+.window-header {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    justify-content: space-between; /* Đặt các nút điều khiển ở cuối và tiêu đề ở đầu */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    background: #e0e0e0; /* Nền xám nhạt cho thanh tiêu đề ở chế độ sáng */
+    padding: 10px 15px; /* Khoảng đệm bên trong */
+    border-top-left-radius: 8px; /* Bo tròn góc trên bên trái */
+    border-top-right-radius: 8px; /* Bo tròn góc trên bên phải */
+    transition: background 0.3s ease-out; /* Chuyển động mượt mà khi thay đổi nền (ví dụ: sang chế độ tối) */
+}
+
+/* Kiểu thanh tiêu đề khi cửa sổ được phóng to (giữ bán kính trên cùng, nhưng khớp với viền cửa sổ) */
+.window-frame.maximized .window-header {
+    border-top-left-radius: 8px; /* Vẫn bo tròn góc trên bên trái */
+    border-top-right-radius: 8px; /* Vẫn bo tròn góc trên bên phải */
+}
+
+
+/* Container cho các nút điều khiển trên thanh tiêu đề (đóng, thu nhỏ, phóng to) */
+.window-buttons {
+    display: flex; /* Sử dụng flexbox */
+    gap: 8px; /* Khoảng cách giữa các nút */
+}
+
+/* Kiểu chung cho các nút điều khiển cửa sổ */
+.window-button {
+    width: 12px; /* Chiều rộng nút */
+    height: 12px; /* Chiều cao nút */
+    border-radius: 50%; /* Làm cho nút tròn */
+    cursor: pointer; /* Thay đổi con trỏ thành biểu tượng bàn tay khi di chuột qua */
+}
+
+.close-btn { background: #ff5f57; } /* Màu đỏ cho nút đóng */
+.minimize-btn { background: #ffbd2e; } /* Màu vàng cho nút thu nhỏ */
+.maximize-btn { background: #28c940; } /* Màu xanh lá cây cho nút phóng to */
+
+/* Container cho các nút điều khiển mới (chế độ tối và ngôn ngữ) */
+.control-buttons {
+    position: absolute; /* Định vị tuyệt đối so với phần tử cha (.window-frame) */
+    top: 55px; /* Cách lề trên của .window-frame, đặt dưới header một chút */
+    right: 20px; /* Cách lề phải của .window-frame */
+    z-index: 100; /* Đảm bảo chúng hiển thị trên các nội dung khác và thanh tiêu đề */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Đặt các mục con theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các nút điều khiển */
+}
+
+/* Kiểu mặc định (chế độ sáng) cho chính nút điều khiển */
+.control-button {
+    background-color: #6494b3; /* Nền xanh cho chế độ sáng */
+    color: white; /* Màu mặc định cho văn bản/biểu tượng (sẽ bị ghi đè bởi quy tắc icon cụ thể) */
+    border: none; /* Không có viền */
+    padding: 8px 10px; /* Khoảng đệm bên trong */
+    border-radius: 5px; /* Bo tròn các góc */
+    cursor: pointer; /* Thay đổi con trỏ thành biểu tượng bàn tay khi di chuột qua */
+    font-size: 1.2em; /* Kích thước font cơ bản */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển động mượt mà cho nền và transform */
+    display: flex; /* Sử dụng flexbox để căn giữa biểu tượng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    width: 40px; /* Chiều rộng cố định cho nút */
+    height: 40px; /* Chiều cao cố định cho nút */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào chiều rộng/chiều cao */
+}
+
+/* Kiểu chế độ tối cho chính nút điều khiển */
+body.dark-mode .control-button {
+    background-color: #000; /* Nền đen cho chế độ tối */
+}
+
+/* Kiểu cụ thể cho biểu tượng bên trong nút điều khiển */
+.control-button i {
+    font-size: 1.2em; /* Đảm bảo biểu tượng hiển thị và có kích thước phù hợp */
+    line-height: 1; /* Giúp căn chỉnh biểu tượng theo chiều dọc */
+}
+
+/* Màu biểu tượng mặt trời trong chế độ sáng */
+.control-button .fa-sun {
+    color: #ffc107; /* Màu vàng cho mặt trời */
+}
+
+/* Màu biểu tượng mặt trăng trong chế độ tối */
+.control-button .fa-moon {
+    color: #fff; /* Màu trắng cho mặt trăng */
+}
+
+/* Hiệu ứng khi di chuột qua nút điều khiển */
+.control-button:hover {
+    background: #45a049; /* Nền xanh đậm hơn khi di chuột qua */
+    transform: translateY(-2px); /* Dịch chuyển nút lên trên một chút */
+}
+
+/* Nút khởi động lại (relaunch button) - hiển thị khi cửa sổ bị thu nhỏ/đóng */
+.relaunch-logo {
+    display: none; /* Ẩn theo mặc định */
+    position: fixed; /* Đặt vị trí cố định trên màn hình */
+    /* Định vị đã cập nhật để căn giữa dưới cùng */
+    bottom: 20px; /* Cách 20px từ cuối màn hình */
+    left: 50%; /* Dịch chuyển 50% từ trái sang */
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+    width: 80px; /* Chiều rộng của nút */
+    z-index: 5; /* Quan trọng: z-index thấp hơn window-frame (10) để nút nằm dưới khi cửa sổ hiển thị */
+    cursor: pointer; /* Thay đổi con trỏ thành biểu tượng bàn tay */
+    animation: pulse 2s infinite ease-in-out; /* Áp dụng hoạt ảnh nhấp nháy */
+    font-size: 60px; /* Điều chỉnh kích thước lớn hơn cho biểu tượng */
+    color: #ffffff; /* Màu mặc định cho biểu tượng */
+}
+
+/* Keyframes đã cập nhật cho hoạt ảnh "pulse" để đảm bảo căn giữa chính xác */
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.6; } /* Bắt đầu ở kích thước bình thường, mờ đi một chút */
+    50% { transform: translateX(-50%) scale(1.1); opacity: 1; } /* Phóng to và sáng hơn ở giữa chu kỳ */
+    100% { transform: translateX(-50%) scale(1); opacity: 0.6; } /* Trở về trạng thái ban đầu */
+}
+
+/* Nội dung chính của trang profile */
+.Body {
+    padding: 20px; /* Khoảng đệm bên trong */
+    overflow-y: auto; /* Cho phép cuộn theo chiều dọc khi nội dung quá dài */
+    box-sizing: border-box; /* Đảm bảo padding được tính vào kích thước của phần tử */
+    transition: color 0.3s ease, opacity 0.3s ease; /* Thêm chuyển động mượt mà cho màu sắc và độ trong suốt của nội dung */
+}
+
+/* Chiều cao tối đa cho phần Body khi cửa sổ được khôi phục (kích thước nhỏ) */
+.window-frame.restored .Body {
+    max-height: calc(100vh - 150px); /* Chiều cao tối đa dựa trên chiều cao viewport trừ đi một khoảng cố định */
+}
+
+/* Chiều cao tối đa cho phần Body khi cửa sổ được phóng to (full màn hình) */
+.window-frame.maximized .Body {
+    max-height: calc(100vh - 70px); /* Chiều cao tối đa dựa trên chiều cao viewport trừ đi một khoảng nhỏ hơn */
+}
+
+
+/* --- KIỂU CHUNG CHO TẤT CẢ CÁC PHẦN NỘI DUNG (content-section) --- */
+.content-section {
+    background-color: #ffffff; /* Nền trắng cho chế độ sáng */
+    padding: 25px; /* Khoảng đệm bên trong */
+    margin-bottom: 25px; /* Khoảng cách với phần tiếp theo */
+    border-radius: 8px; /* Bo tròn các góc */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    border: 1px solid #000000; /* Viền màu xám nhạt cho chế độ sáng */
+    transition: transform 0.2s ease-out, background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển động mượt mà khi thay đổi */
+}
+
+/* Hiệu ứng khi di chuột qua các phần nội dung */
+.content-section:hover {
+    transform: translateY(-5px); /* Dịch chuyển phần lên trên một chút */
+}
+
+/* --- KIỂU CHO TIÊU ĐỀ VÀ CHÚ THÍCH CỦA CÁC PHẦN (section-title, section-description) --- */
+.section-title {
+    font-size: 2em; /* Kích thước font lớn hơn */
+    color: #000000; /* Màu chữ xanh đậm cho chế độ sáng */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    text-align: center; /* Căn giữa chữ */
+    border-bottom: 2px solid #000000; /* Viền dưới mỏng màu xám nhạt cho chế độ sáng */
+    padding-bottom: 10px; /* Khoảng đệm dưới viền */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ và viền */
+}
+
+.section-description {
+    font-size: 1.1em; /* Kích thước font */
+    color: #000000; /* Màu chữ xám cho chế độ sáng */
+    margin-top: -5px; /* Dịch chuyển lên một chút (căn chỉnh với tiêu đề) */
+    margin-bottom: 25px; /* Khoảng cách dưới */
+    line-height: 1.5; /* Chiều cao dòng */
+    text-align: center; /* Căn giữa chữ */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ */
+}
+
+/* Trang1 (Phần giới thiệu bản thân) */
+.Trang1 {
+    text-align: center; /* Căn giữa toàn bộ nội dung trong Trang1 */
+    border-left: 8px solid #afa6a6; /* Viền trái màu xám đặc biệt cho phần này */
+}
+
+.Trang1.content-section {
+    padding: 30px; /* Khoảng đệm lớn hơn cho phần giới thiệu */
+}
+
+/* Ảnh đại diện trong phần giới thiệu */
+.profile-img {
+    display: block; /* Hiển thị như một khối để có thể căn giữa bằng margin */
+    margin: 0 auto 15px auto; /* Căn giữa ảnh và thêm khoảng cách 15px phía dưới */
+    width: 150px; /* Chiều rộng ảnh */
+    height: 150px; /* Chiều cao ảnh */
+    border-radius: 50%; /* Làm ảnh tròn */
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung tròn mà không bị méo */
+    border: 4px solid black; /* Viền đen dày cho ảnh */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Đổ bóng cho ảnh */
+}
+
+/* Khối chứa thông tin tên, ngành, trường */
+.info-text {
+    text-align: center; /* Căn giữa văn bản */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+/* Tên trong phần giới thiệu */
+.Ten {
+    font-size: 2.5em; /* Kích thước font lớn */
+    color: #000000; /* Màu chữ xanh đậm cho chế độ sáng */
+    margin-bottom: 8px; /* Khoảng cách dưới */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Đổ bóng chữ nhẹ */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ */
+}
+
+/* Ngành và Trường Đại học */
+.Nganh, .TruongDaiHoc {
+    font-size: 1.2em; /* Kích thước font */
+    color: #000000; /* Màu chữ xám cho chế độ sáng */
+    margin-bottom: 5px; /* Khoảng cách dưới */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ */
+}
+
+/* Các phần cụ thể (Dự Án) */
+.DuAn {
+    border-left: 8px solid #afa6a6; /* Viền trái màu xám đặc biệt cho phần này */
+}
+
+/* Tiêu đề dự án con (SUDOKU, Website Cá Nhân) */
+.SUDOKU, .WebsiteCaNhan {
+    font-size: 1.5em; /* Kích thước font */
+    font-weight: bold; /* Chữ in đậm */
+    color: #000000; /* Màu chữ xanh đậm cho chế độ sáng */
+    margin-bottom: 12px; /* Khoảng cách dưới */
+    margin-top: 20px; /* Khoảng cách trên */
+    padding-bottom: 5px; /* Khoảng đệm dưới */
+    border-bottom: 1px dashed #000000; /* Viền dưới nét đứt màu xám nhạt cho chế độ sáng */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ và viền */
+}
+
+/* Mô tả dự án */
+.project-desc {
+    font-size: 1em; /* Kích thước font */
+    line-height: 1.7; /* Chiều cao dòng */
+    color: #000000; /* Màu chữ xám đậm cho chế độ sáng */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ */
+}
+
+/* Phần Thông Tin Liên Hệ */
+.ThongTinLienHe {
+    border-left: 8px solid #afa6a6; /* Viền trái màu xám đặc biệt cho phần này */
+}
+
+/* Danh sách liên hệ */
+.contact-list {
+    list-style: none; /* Xóa dấu đầu dòng của danh sách */
+    padding: 0; /* Xóa padding mặc định */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+}
+
+/* Mỗi mục trong danh sách liên hệ */
+.contact-list li {
+    margin-bottom: 12px; /* Khoảng cách giữa các mục */
+    color: #000000; /* Màu chữ xanh xám cho chế độ sáng */
+    font-size: 1.1em; /* Kích thước font */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ */
+}
+
+/* Chữ in đậm trong danh sách liên hệ (Email, Số điện thoại) */
+.contact-list strong {
+    color: #000000; /* Màu chữ xanh đậm cho chế độ sáng */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển động mượt mà cho màu chữ */
+}
+
+/* Liên kết trong danh sách liên hệ (Email) */
+.contact-list a {
+    color: #2196F3; /* Màu xanh dương cho liên kết */
+    text-decoration: none; /* Xóa gạch chân mặc định */
+    transition: color 0.2s ease; /* Hiệu ứng chuyển động mượt mà cho màu liên kết */
+}
+
+/* Hiệu ứng khi di chuột qua liên kết */
+.contact-list a:hover {
+    color: #1a71c2; /* Màu xanh đậm hơn khi di chuột qua */
+    text-decoration: underline; /* Gạch chân khi di chuột qua */
+}
+
+/* Container cho các liên kết mạng xã hội */
+.social-links {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa các icon mạng xã hội */
+    gap: 30px; /* Khoảng cách giữa các icon */
+    margin-top: 20px; /* Khoảng cách trên */
+}
+
+/* Kiểu chung cho tất cả các icon mạng xã hội */
+.social-link {
+    font-size: 3em; /* Kích thước cơ bản của tất cả các icon mạng xã hội */
+    color: #888; /* Màu icon xám cho chế độ sáng */
+    transition: color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển động mượt mà cho màu và transform */
+}
+
+/* Hiệu ứng khi di chuột qua icon mạng xã hội */
+.social-link:hover {
+    transform: translateY(-8px) scale(1.1); /* Dịch chuyển lên trên và phóng to một chút */
+}
+
+/* Màu hover cụ thể cho từng mạng xã hội */
+.social-link.facebook:hover { color: #3b5998; } /* Màu xanh Facebook */
+.social-link.twitter:hover { color: #1da1f2; } /* Màu xanh Twitter */
+.social-link.telegram:hover {color: #0088cc; }/* Màu xanh Telegram */
+.social-link.github:hover { color: #333; } /* Màu đen GitHub */
+.social-link.instagram:hover {
+    /* Hiệu ứng màu gradient đặc trưng của Instagram */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text; /* Cắt nền theo hình dạng văn bản */
+    -webkit-text-fill-color: transparent; /* Làm cho văn bản trong suốt để hiển thị nền */
+}
+
+/* --- KIỂU CHO CHẾ ĐỘ TỐI (DARK MODE) --- */
+/* Khi body có class 'dark-mode', áp dụng các kiểu sau */
+body.dark-mode .window-frame {
+    background: rgba(40, 40, 40, 0.95); /* Nền tối hơn cho khung cửa sổ */
+    border-color: #555; /* Viền sáng hơn một chút trong chế độ tối */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); /* Đổ bóng đậm hơn */
+}
+
+body.dark-mode .window-header {
+    background: #333; /* Thanh tiêu đề tối hơn */
+    color: #eee; /* Chữ sáng hơn */
+}
+
+body.dark-mode .Body {
+    color: #eee; /* Màu chữ sáng cho nội dung chính */
+}
+
+body.dark-mode .content-section {
+    background-color: #282828; /* Nền tối cho các phần nội dung */
+    border-color: #444; /* Viền tối hơn cho các phần */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Đổ bóng đậm hơn */
+}
+
+body.dark-mode .section-title,
+body.dark-mode .Ten,
+body.dark-mode .SUDOKU,
+body.dark-mode .WebsiteCaNhan,
+body.dark-mode .contact-list strong {
+    color: #f8f8f8; /* Màu chữ rất sáng cho tiêu đề và các phần quan trọng trong chế độ tối */
+}
+
+body.dark-mode .section-description,
+body.dark-mode .Nganh,
+body.dark-mode .TruongDaiHoc,
+body.dark-mode .project-desc,
+body.dark-mode .contact-list li {
+    color: #bbb; /* Màu xám nhạt hơn cho mô tả và văn bản thông thường trong chế độ tối */
+}
+
+body.dark-mode .section-title,
+body.dark-mode .SUDOKU,
+body.dark-mode .WebsiteCaNhan {
+    border-color: #555; /* Viền tối hơn cho tiêu đề và các phần dự án */
+}
+
+body.dark-mode .social-link {
+    color: #bbb; /* Màu sáng hơn cho các icon mạng xã hội trong chế độ tối */
+}
