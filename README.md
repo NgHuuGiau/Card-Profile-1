@@ -9,7 +9,7 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 
 ---
 
-![Demo](Video/Picture/demo.png)
+![Demo](Video-Picture/demo.png)
 
 ---
 
