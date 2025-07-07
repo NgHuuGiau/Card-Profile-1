@@ -15,26 +15,13 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 - Tạo ra một giao diện thân thiện với người dùng với các tính năng tương tác cơ bản.
   
 ---
-🧱 Công nghệ sử dụng
-Thành phần
+## 🧱 Công nghệ sử dụng
 
-Mô tả
+| Thành phần | Mô tả |
+|-----------|-------|
+| `HTML5` | Cấu trúc nội dung trang web. |
+| `CSS3` | Định kiểu giao diện, bao gồm responsive design, chế độ sáng/tối và hiệu ứng chuyển động. |
+| `Vanilla JavaScript` | Xử lý logic tương tác của cửa sổ (thu nhỏ, phóng to, đóng, mở lại), chuyển đổi ngôn ngữ, và chế độ sáng/tối. |
+| `Font Awesome` | Cung cấp các biểu tượng cho giao diện người dùng (nút điều khiển, mạng xã hội) |
 
-HTML5
-
-Cấu trúc nội dung trang web.
-
-CSS3
-
-Định kiểu giao diện, bao gồm responsive design, chế độ sáng/tối và hiệu ứng chuyển động.
-
-Vanilla JavaScript
-
-Xử lý logic tương tác của cửa sổ (thu nhỏ, phóng to, đóng, mở lại), chuyển đổi ngôn ngữ, và chế độ sáng/tối.
-
-Font Awesome
-
-Cung cấp các biểu tượng cho giao diện người dùng (nút điều khiển, mạng xã hội).
-
-
-Xuất sang Trang tính
+---
