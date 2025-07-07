@@ -1,92 +1,96 @@
-Website Hồ Sơ Cá Nhân - Nguyễn Hữu Giàu
-Giới Thiệu
-Đây là một website hồ sơ cá nhân hiện đại và tương tác, được thiết kế để trình bày thông tin cá nhân, kỹ năng, và các dự án nổi bật một cách chuyên nghiệp và hấp dẫn. Website có giao diện mô phỏng cửa sổ desktop với các tính năng thu nhỏ, phóng to, đóng/mở, cùng với chế độ sáng/tối và hỗ trợ đa ngôn ngữ (Tiếng Việt và Tiếng Anh).
+🌟 Nguyễn Hữu Giàu - Hồ Sơ Cá Nhân Tương Tác 🌟
+Một trải nghiệm website cá nhân độc đáo, mô phỏng giao diện cửa sổ ứng dụng trên desktop để giới thiệu thông tin và dự án.
 
-Mục tiêu của website là cung cấp một cách tiếp cận hồ sơ cá nhân trực quan và độc đáo, giúp nhà tuyển dụng hoặc đối tác dễ dàng tìm hiểu về tôi.
+🚀 Giới thiệu
+Dự án Website Hồ Sơ Cá Nhân là một trang web được thiết kế để trình bày thông tin về Nguyễn Hữu Giàu một cách hiện đại và tương tác. Giao diện người dùng mô phỏng một cửa sổ ứng dụng trên hệ điều hành desktop, với các tính năng điều khiển cửa sổ quen thuộc, hiệu ứng nền video động và hỗ trợ đa ngôn ngữ.
 
-Tính Năng Nổi Bật
-Giao diện mô phỏng cửa sổ: Trải nghiệm người dùng độc đáo với các nút điều khiển cửa sổ (thu nhỏ, phóng to, đóng/mở).
+Website này mang đến một cách tiếp cận hồ sơ cá nhân mới mẻ, giúp người xem dễ dàng khám phá kỹ năng, dự án và thông tin liên hệ trong một môi trường trực quan và hấp dẫn.
 
-Video nền động: Video chạy nền mượt mà, tạo cảm giác hiện đại và sinh động.
+Ảnh chụp màn hình website của bạn, thể hiện giao diện cửa sổ độc đáo.
 
-Chế độ sáng/tối: Chuyển đổi linh hoạt giữa hai chế độ giao diện, phù hợp với sở thích người dùng.
+🧑‍💻 Mục tiêu
+Trình bày thông tin cá nhân, kỹ năng, và các dự án tiêu biểu (Sudoku, Website Cá Nhân này).
 
-Đa ngôn ngữ: Hỗ trợ Tiếng Việt và Tiếng Anh, dễ dàng chuyển đổi nội dung.
+Cung cấp một trải nghiệm người dùng độc đáo và khác biệt so với các hồ sơ cá nhân truyền thống.
 
-Thiết kế đáp ứng (Responsive Design): (Nếu có) Tối ưu hiển thị trên các thiết bị khác nhau (desktop, tablet, mobile).
+Thể hiện khả năng xây dựng giao diện người dùng tương tác và xử lý logic phía client.
 
-Hiệu ứng chuyển động mượt mà: Các chuyển đổi và tương tác được làm mượt mà bằng CSS transitions.
+🧱 Công nghệ sử dụng
+Thành phần
 
-Các Phần Chính
-Website được chia thành các phần rõ ràng để dễ dàng điều hướng:
+Mô tả
 
-Giới Thiệu Bản Thân: Tổng quan về thông tin cá nhân, chuyên ngành và trường đại học.
+HTML5 / CSS3
 
-Các Dự Án Nổi Bật:
+Cấu trúc nội dung, thiết kế giao diện mô phỏng cửa sổ, hiệu ứng chuyển động, chế độ sáng/tối.
 
-SUDOKU: Mô tả chi tiết về dự án trò chơi Sudoku phát triển bằng Python (Pygame và Tkinter).
+Vanilla JavaScript
 
-Website Cá Nhân: Mô tả về chính website hồ sơ này.
+Điều khiển chức năng cửa sổ (thu nhỏ, phóng to, đóng), chuyển đổi ngôn ngữ, và chế độ sáng/tối.
 
-Liên Hệ & Mạng Xã Hội: Thông tin liên hệ (Email, Số điện thoại) và các liên kết đến trang mạng xã hội (Facebook, Twitter, Instagram, GitHub, Telegram).
+Font Awesome
 
-Công Nghệ Sử Dụng
-HTML5: Cấu trúc và nội dung website.
+Thư viện icon cho các nút điều khiển và liên kết mạng xã hội.
 
-CSS3: Tạo kiểu, thiết kế giao diện mô phỏng cửa sổ, hiệu ứng động, và chế độ sáng/tối.
 
-JavaScript (ES6+): Điều khiển tương tác người dùng, chức năng cửa sổ, chuyển đổi ngôn ngữ và chế độ sáng/tối.
+Xuất sang Trang tính
+🎯 Tính năng nổi bật
+✨ Giao diện mô phỏng cửa sổ desktop: Cửa sổ có thể thu nhỏ, phóng to, và đóng, mang lại cảm giác như đang tương tác với một ứng dụng thực thụ.
 
-Font Awesome: Thư viện icon cho các nút điều khiển và mạng xã hội.
+▶️ Video nền động: Tạo hiệu ứng thị giác ấn tượng và sinh động cho toàn trang.
 
-Cấu Trúc Dự Án
+🌗 Chế độ sáng/tối (Light/Dark Mode): Chuyển đổi linh hoạt giữa hai chủ đề giao diện, tăng trải nghiệm cá nhân hóa.
+
+🌐 Hỗ trợ đa ngôn ngữ: Dễ dàng chuyển đổi giữa 🇻🇳 Tiếng Việt và 🇺🇸 Tiếng Anh.
+
+📱 Thiết kế đáp ứng (Responsive Design): (Nếu có) Tối ưu hóa hiển thị trên các thiết bị khác nhau (desktop, tablet, mobile).
+
+💬 Nội dung được tổ chức rõ ràng: Các phần Giới thiệu, Dự án, và Liên hệ được trình bày mạch lạc.
+
+📂 Cấu trúc dự án
 .
-├── Profile.html
-├── Profile.css
-├── Profile.js
-├── Video - Picture/
+├── Profile.css          # Định kiểu và thiết kế cho giao diện
+├── Profile.html         # Cấu trúc chính của trang web
+├── Profile.js           # Xử lý logic tương tác, chuyển đổi chế độ và ngôn ngữ
+├── Video - Picture/     # Thư mục chứa ảnh đại diện và video nền
 │   ├── Picture.jpg
 │   └── video-background.mp4
-└── README.md
-Profile.html: Cấu trúc chính của trang web.
-
-Profile.css: Định kiểu và thiết kế cho giao diện.
-
-Profile.js: Xử lý logic tương tác, chuyển đổi chế độ và ngôn ngữ.
-
-Video - Picture/: Thư mục chứa ảnh đại diện (Picture.jpg) và video nền (video-background.mp4).
-
-README.md: File này.
-
-Cách Chạy Dự Án
-Để xem website này trên máy tính của bạn:
-
-Tải xuống hoặc clone repository này:
-
+└── README.md            # File mô tả dự án này
+🔧 Cách triển khai
+✅ Cách 1: Chạy cục bộ
 Bash
 
-git clone [URL_của_repository_của_bạn]
-cd [tên_thư_mục_repository]
-Mở file Profile.html: Đơn giản là nhấp đúp vào file Profile.html trong trình duyệt web của bạn.
+# Không cần lệnh clone nếu bạn đã có các file này
+# Đảm bảo các file Profile.html, Profile.css, Profile.js và thư mục Video - Picture
+# nằm cùng cấp trong thư mục dự án của bạn.
 
-Phát Triển
-Bạn có thể chỉnh sửa các file Profile.html, Profile.css, và Profile.js để tùy chỉnh nội dung, giao diện hoặc thêm các tính năng mới.
+# Sau đó, chỉ cần mở tệp Profile.html bằng trình duyệt web của bạn
+# (Ví dụ: nhấp đúp vào Profile.html)
+✅ Cách 2: Triển khai lên Internet
+Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau để đưa website của mình lên mạng:
 
-Nội dung: Chỉnh sửa trực tiếp file Profile.html hoặc cập nhật đối tượng content trong Profile.js để thêm/sửa nội dung đa ngôn ngữ.
+GitHub Pages
 
-Giao diện: Thay đổi các quy tắc CSS trong Profile.css.
+Netlify
 
-Chức năng: Tùy chỉnh hoặc thêm logic vào Profile.js.
+Vercel
 
-Tác Giả
-Nguyễn Hữu Giàu
+🛡️ Giấy phép
+Dự án này là sản phẩm cá nhân. Vui lòng tham khảo tệp LICENSE (nếu có) để biết chi tiết về việc sử dụng.
 
-Email: HuuGiau2304@gmail.com
+Đây là sản phẩm cá nhân phục vụ mục đích học tập và giới thiệu kỹ năng. Vui lòng không sử dụng lại toàn bộ cho mục đích thương mại mà không có sự cho phép bằng văn bản.
 
-GitHub: NgHuuGiau
+📬 Liên hệ
+Tác giả: Nguyễn Hữu Giàu
 
-Facebook: HuuGiau.2304
+📧 Email: HuuGiau2304@gmail.com
 
-Instagram: nguyen_huugiau
+🐙 GitHub: NgHuuGiau
 
-Twitter: Nguyen_Huu_Giau
+📘 Facebook: HuuGiau.2304
+
+📸 Instagram: nguyen_huugiau
+
+🐦 X (Twitter): Nguyen_Huu_Giau
+
+✈️ Telegram: https://telegram.com
