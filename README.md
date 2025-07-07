@@ -52,6 +52,7 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 
 ## 📂 Cấu trúc dự án
 
+```bash
 Root Folder/
 ├── Video - Picture/  # Thư mục chứa video nền và ảnh đại diện
 │   ├── Picture.jpg
@@ -59,6 +60,7 @@ Root Folder/
 ├── Profile.html      # Tệp HTML chính chứa cấu trúc nội dung
 ├── Profile.css       # Tùy chỉnh giao diện, chế độ sáng/tối, hiệu ứng
 └── Profile.js        # Toàn bộ logic điều khiển giao diện tương tác và chuyển đổi ngôn ngữ
+```
 
 ---
 
