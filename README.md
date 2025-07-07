@@ -42,7 +42,7 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 
 ---
 
-##📂 Cấu trúc dự án
+## 📂 Cấu trúc dự án
 
 Root Folder/
 ├── Video - Picture/  # Thư mục chứa video nền và ảnh đại diện
@@ -54,13 +54,13 @@ Root Folder/
 
 ---
 
-##🔧 Cách triển khai
+## 🔧 Cách triển khai
 
-###✅ Cách 1: Chạy cục bộ
+### ✅ Cách 1: Chạy cục bộ
 
 
 
-###✅ Cách 2: Triển khai lên Internet
+### ✅ Cách 2: Triển khai lên Internet
 Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
 
 - [GitHub Pages](https://pages.github.com/)
@@ -69,12 +69,12 @@ Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
 
 ---
 
-##🛡️ Giấy phép
+## 🛡️ Giấy phép
 Dự án này được tạo ra như một hồ sơ cá nhân và phục vụ mục đích giới thiệu kỹ năng.
 
 ---
 
-##📬 Liên hệ
+## 📬 Liên hệ
 Tác giả: Nguyễn Hữu Giàu
 
 -**Email**: HuuGiau2304@gmail.com
@@ -89,5 +89,5 @@ Tác giả: Nguyễn Hữu Giàu
 
 ---
 
-##❗️ Lưu ý:
+## ❗️ Lưu ý:
 - Hiện tại giao diện web có thể sẽ bị lỗi đối với mobile
