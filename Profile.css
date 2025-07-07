@@ -15,6 +15,11 @@
     object-fit: cover; /* Đảm bảo video lấp đầy toàn bộ khu vực mà không bị méo hoặc có viền đen */
 }
 
+/* Thêm vào đây để body có nền đen làm dự phòng khi video không chạy */
+body {
+    background-color: black;
+}
+
 /* Giao diện khung ứng dụng (cửa sổ chính của profile) */
 .window-frame {
     /* Kiểu cơ bản - luôn được căn giữa trên màn hình */
