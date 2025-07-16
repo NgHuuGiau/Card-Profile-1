@@ -376,7 +376,7 @@ body.dark-mode .control-button {
 
 /* Kiểu chung cho tất cả các icon mạng xã hội */
 .social-link {
-    font-size: 3em; /* Kích thước cơ bản của tất cả các icon mạng xã hội */
+    font-size: 2.5em; /* Kích thước cơ bản của tất cả các icon mạng xã hội (giảm từ 3em) */
     color: #888; /* Màu icon xám cho chế độ sáng */
     transition: color 0.3s ease, transform 0.2s ease; /* Hiệu ứng chuyển động mượt mà cho màu và transform */
 }
@@ -456,7 +456,7 @@ body.dark-mode .social-link {
     }
 
     .social-link {
-        font-size: 2.5em; /* Giảm kích thước biểu tượng */
+        font-size: 2em; /* Giảm kích thước biểu tượng cho tablet */
     }
 }
 
@@ -467,6 +467,93 @@ body.dark-mode .social-link {
     }
 
     .social-link {
-        font-size: 2em; /* Giảm kích thước biểu tượng hơn nữa để vừa vặn */
+        font-size: 1.8em; /* Giảm kích thước biểu tượng hơn nữa để vừa vặn trên điện thoại */
+    }
+}
+/* Responsive adjustments for window-frame */
+@media (max-width: 768px) {
+    .window-frame.restored {
+        width: 95%; /* Make it wider on tablets */
+        max-height: calc(100vh - 40px); /* Adjust max-height */
+    }
+
+    .window-frame.maximized {
+        width: 100vw; /* Full width on smaller screens */
+        height: 100vh; /* Full height on smaller screens */
+        border-radius: 0; /* Remove border-radius when maximized on mobile */
+        left: 0; /* Align to left edge */
+        top: 0; /* Align to top edge */
+        transform: none; /* Remove transform to avoid shifting */
+    }
+
+    .window-frame.maximized .window-header {
+        border-top-left-radius: 0; /* Remove border-radius for header */
+        border-top-right-radius: 0; /* Remove border-radius for header */
+    }
+
+    /* Adjust Body max-height for maximized state on smaller screens */
+    .window-frame.maximized .Body {
+        max-height: calc(100vh - 60px); /* Smaller header, more space for content */
+    }
+
+    .control-buttons {
+        top: 10px; /* Adjust position for control buttons */
+        right: 10px;
+        flex-direction: row; /* Display buttons in a row */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .control-button {
+        width: 35px; /* Smaller buttons */
+        height: 35px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .window-frame.restored {
+        width: 100%; /* Full width on phones */
+        height: 100%; /* Full height on phones */
+        max-height: 100vh;
+        border-radius: 0; /* No border-radius on small screens */
+    }
+
+    .window-frame.maximized {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .window-header {
+        padding: 8px 10px; /* Smaller padding for header */
+    }
+
+    .window-button {
+        width: 10px; /* Smaller window control buttons */
+        height: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5em; /* Smaller font size for titles */
+    }
+
+    .section-description {
+        font-size: 0.9em; /* Smaller font size for descriptions */
+    }
+
+    .Ten {
+        font-size: 2em; /* Smaller font for name */
+    }
+
+    .Nganh, .TruongDaiHoc {
+        font-size: 1em; /* Smaller font for major/university */
+    }
+
+    .SUDOKU, .WebsiteCaNhan {
+        font-size: 1.3em; /* Smaller font for project titles */
+    }
+
+    .project-desc, .contact-list li {
+        font-size: 0.9em; /* Smaller font for project descriptions and contact list */
     }
 }
