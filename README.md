@@ -3,9 +3,11 @@
 
 ---
 
-## 🚀 Giới thiệu
+## ✨ Chào mừng đến với không gian làm việc của tôi!
 
-Dự án Profile-web là một hồ sơ cá nhân (personal profile) được thiết kế với giao diện cửa sổ đơn giản, mô phỏng một ứng dụng trên máy tính. Hồ sơ này tập trung vào việc trình bày thông tin cá nhân, học vấn và các dự án nổi bật của Nguyễn Hữu Giàu. Giao diện có các hiệu ứng chuyển đổi, tính năng đa ngôn ngữ và khả năng điều khiển cửa sổ, mang lại trải nghiệm tương tác trực quan.
+Bạn đang bước vào Profile-web – không chỉ là một hồ sơ cá nhân thông thường, mà là một trải nghiệm ứng dụng máy tính thu nhỏ ngay trên trình duyệt của bạn! Tôi đã thiết kế nó để bạn có thể tương tác, khám phá thông tin cá nhân, hành trình học vấn và những dự án tâm huyết của tôi một cách trực quan, sống động nhất.
+
+Với giao diện cửa sổ độc đáo, các hiệu ứng chuyển đổi mượt mà và khả năng điều khiển linh hoạt, tôi tin rằng đây sẽ là một cách thú vị để bạn tìm hiểu về năng lực và niềm đam mê của tôi trong thế giới lập trình. Hãy click, kéo, và khám phá!
 
 ---
 
@@ -13,13 +15,13 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 
 ---
 
-## 🧑‍💻 Mục tiêu
+## 🎯 Tầm nhìn & Mục tiêu
 
-- Trình bày thông tin cá nhân, học vấn, và các dự án tiêu biểu.
+- Tạo dấu ấn: Trình bày thông tin cá nhân, học vấn và các dự án nổi bật một cách khác biệt và đầy sáng tạo, để lại ấn tượng mạnh mẽ.
 
-- Cung cấp một cách chuyên nghiệp và hấp dẫn để nhà tuyển dụng hoặc đối tác tiếp cận hồ sơ.
+- Kết nối chuyên nghiệp: Cung cấp một kênh tiếp cận hồ sơ hiệu quả và hấp dẫn cho nhà tuyển dụng, đối tác hoặc những người cùng chí hướng.
 
-- Tạo ra một giao diện thân thiện với người dùng với các tính năng tương tác cơ bản.
+- Trải nghiệm đỉnh cao: Xây dựng một giao diện thân thiện, trực quan và tương tác cao, mô phỏng chân thực trải nghiệm ứng dụng desktop.
   
 ---
 
@@ -27,26 +29,26 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 
 | Thành phần | Mô tả |
 |-----------|-------|
-| `HTML5` | Cấu trúc nội dung trang web. |
+| `HTML5` | Nền tảng vững chắc cho mọi cấu trúc nội dung, đảm bảo tính súc tích và dễ dàng mở rộng. |
 | `CSS3` | Định kiểu giao diện, bao gồm responsive design, chế độ sáng/tối và hiệu ứng chuyển động. |
-| `Vanilla JavaScript` | Xử lý logic tương tác của cửa sổ (thu nhỏ, phóng to, đóng, mở lại), chuyển đổi ngôn ngữ, và chế độ sáng/tối. |
-| `Font Awesome` | Cung cấp các biểu tượng cho giao diện người dùng (nút điều khiển, mạng xã hội) |
+| `Vanilla JavaScript` | Bộ não điều khiển: Xử lý mọi logic tương tác phức tạp của cửa sổ (thu nhỏ, phóng to, đóng, kéo thả), chuyển đổi ngôn ngữ, và chế độ sáng/tối mượt mà. |
+| `Font Awesome` | Kho biểu tượng đa dạng: Tăng cường tính thẩm mỹ và dễ sử dụng cho các nút điều khiển, biểu tượng mạng xã hội. |
 
 ---
 
 ## 🎯 Tính năng nổi bật
 
-- ✨ Giao diện cửa sổ: Mô phỏng một ứng dụng với các nút điều khiển thu nhỏ, phóng to và đóng cửa sổ.
+- ✨ Giao diện "Desktop App": Trải nghiệm như một ứng dụng thực thụ với các nút điều khiển cửa sổ (thu nhỏ, phóng to, đóng) hoạt động mượt mà..
 
-- 🌐 Hỗ trợ song ngữ: 🇻🇳 Tiếng Việt và 🇺🇸 English, với khả năng chuyển đổi tức thì.
+- 🌐 "Ngôn ngữ của bạn": Hỗ trợ song ngữ (🇻🇳 Tiếng Việt & 🇺🇸 English), giúp bạn dễ dàng chuyển đổi để đọc hiểu nội dung.
 
-- 💡 Chế độ sáng/tối: Tùy chọn chuyển đổi giữa giao diện sáng và tối.
+- 💡 Chế độ "Ngày & Đêm": Tùy chỉnh giao diện sáng/tối linh hoạt, bảo vệ mắt và phù hợp với mọi môi trường làm việc.
 
-- 🔄 Hiệu ứng chuyển động: Các chuyển động mượt mà khi cửa sổ thay đổi kích thước hoặc khi di chuột qua các phần tử.
+- 🔄 Chuyển động mượt mà: Các hiệu ứng chuyển động tinh tế khi cửa sổ thay đổi kích thước hoặc khi bạn di chuột qua các phần tử.
 
-- 🖼️ Video nền: Một video phát lặp làm nền cho toàn bộ trang web.
+- 🖼️ Video nền sống động: Một video phát lặp độc đáo làm nền, tạo điểm nhấn thị giác và không khí riêng biệt cho trang web.
 
-- ✉️ Thông tin liên hệ & Mạng xã hội: Dễ dàng kết nối qua email, số điện thoại và các nền tảng mạng xã hội phổ biến.
+- 💌 Kết nối tức thì: Tất cả thông tin liên hệ và mạng xã hội được tích hợp tiện lợi, chỉ một cú click để kết nối với tôi!
 
 ---
 
@@ -54,17 +56,17 @@ Dự án Profile-web là một hồ sơ cá nhân (personal profile) được th
 
 ```bash
 Root Folder/
-├── Video - Picture/  # Thư mục chứa video nền và ảnh đại diện
-│   ├── Picture.jpg
-│   └── video-background.mp4
-├── Profile.html      # Tệp HTML chính chứa cấu trúc nội dung
-├── Profile.css       # Tùy chỉnh giao diện, chế độ sáng/tối, hiệu ứng
-└── Profile.js        # Toàn bộ logic điều khiển giao diện tương tác và chuyển đổi ngôn ngữ
+├── Video - Picture/  # Thư mục chứa video nền và ảnh đại diện, sẵn sàng cho mọi định dạng hình ảnh!
+│   ├── Picture.jpg   # Ảnh chân dung cá nhân
+│   └── video-background.mp4 # Video nền độc đáo
+├── Profile.html      # Tệp HTML chính – "Khung xương" của ứng dụng
+├── Profile.css       # "Linh hồn" CSS: định hình phong cách, màu sắc và hiệu ứng "desktop"
+└── Profile.js        # "Bộ não" JavaScript: điều khiển mọi tương tác, logic cửa sổ và tính năng thông minh
 ```
 
 ---
 
-## 🔧 Cách triển khai
+## 🚀 Cách triển khai
 
 ### ✅ Cách 1: Khám phá cục bộ
 
