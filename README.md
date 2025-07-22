@@ -15,7 +15,7 @@ Với giao diện cửa sổ độc đáo, các hiệu ứng chuyển đổi mư
 
 ---
 
-## 🎯 Tầm nhìn & Mục tiêu
+## 
 
 - Tạo dấu ấn: Trình bày thông tin cá nhân, học vấn và các dự án nổi bật một cách khác biệt và đầy sáng tạo, để lại ấn tượng mạnh mẽ.
 
