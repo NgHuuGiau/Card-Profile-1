@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2025 Nguyễn Hữu Giàu. All rights reserved.
- * Licensed under the MIT License.
- * See LICENSE file for details.
- */
 /* Video nền cho toàn bộ trang web */
 .video-background {
     position: fixed; /* Đặt vị trí cố định trên màn hình, không cuộn cùng nội dung */
@@ -264,7 +259,7 @@ body.dark-mode .control-button {
 /* Trang1 (Phần giới thiệu bản thân) */
 .Trang1 {
     text-align: center; /* Căn giữa toàn bộ nội dung trong Trang1 */
-    border-left: 8px solid #afa6a6; /* Viền trái màu xám đặc biệt cho phần này */
+    border-left: 8px solid #ff0000; /* Viền trái màu xám đặc biệt cho phần này */
 }
 
 .Trang1.content-section {
@@ -308,7 +303,7 @@ body.dark-mode .control-button {
 
 /* Các phần cụ thể (Dự Án) */
 .DuAn {
-    border-left: 8px solid #afa6a6; /* Viền trái màu xám đặc biệt cho phần này */
+    border-left: 8px solid #ffe600; /* Viền trái màu xám đặc biệt cho phần này */
 }
 
 /* Tiêu đề dự án con (SUDOKU, Website Cá Nhân) */
@@ -334,7 +329,7 @@ body.dark-mode .control-button {
 
 /* Phần Thông Tin Liên Hệ */
 .ThongTinLienHe {
-    border-left: 8px solid #afa6a6; /* Viền trái màu xám đặc biệt cho phần này */
+    border-left: 8px solid #00ff00; /* Viền trái màu xám đặc biệt cho phần này */
 }
 
 /* Danh sách liên hệ */
