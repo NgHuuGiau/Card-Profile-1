@@ -66,24 +66,35 @@ Root Folder/
 
 ## 🔧 Cách triển khai
 
-### ✅ Cách 1: Chạy cục bộ
+### ✅ Cách 1: Khám phá cục bộ
 
 ```bash
-# Clone hoặc tải xuống các tệp vào một thư mục
-# Mở tệp Profile.html bằng trình duyệt web
+# Tải về: Kéo toàn bộ mã nguồn về máy tính của bạn.
+
+# Mở: Click đúp vào tệp index.html và khám phá ngay trong trình duyệt của bạn!
 ```
 
-### ✅ Cách 2: Triển khai lên Internet
-Bạn có thể sử dụng một trong các nền tảng hosting tĩnh sau:
+### ✅ Cách 2: Triển khai toàn cầu
+Muốn đưa hồ sơ của bạn lên mạng? Rất đơn giản!
 
+- GitHub Pages: Cách nhanh nhất để chia sẻ dự án trực tiếp từ kho GitHub của bạn.
+  
 - [GitHub Pages](https://pages.github.com/)
+
+- Netlify: Triển khai siêu tốc, tích hợp CI/CD và miễn phí HTTPS.
+
 - [Netlify](https://netlify.com/)
+
+- Vercel: Nền tảng tuyệt vời cho frontend, tối ưu hóa hiệu suất và trải nghiệm phát triển.
+
 - [Vercel](https://vercel.com/)
 
 ---
 
 ## 🛡️ Giấy phép
-Dự án này được tạo ra như một hồ sơ cá nhân và phục vụ mục đích giới thiệu kỹ năng.
+Copyright (c) 2025 Nguyễn Hữu Giàu.
+
+Dự án này được cấp phép dưới Giấy phép MIT. Điều đó có nghĩa là bạn có thể tự do sử dụng, chỉnh sửa và phân phối. Hãy xem tệp LICENSE để biết thêm chi tiết! Nếu bạn có ý tưởng cải thiện hoặc muốn cộng tác, đừng ngần ngại liên hệ nhé!
 
 ---
 
@@ -102,5 +113,10 @@ Tác giả: Nguyễn Hữu Giàu
 
 ---
 
-## ❗️ Lưu ý:
-- Hiện tại giao diện web có thể sẽ bị lỗi đối với mobile
+## 💡 Góc nhỏ chia sẻ:
+
+- Tôi đang nỗ lực hết mình để tối ưu hóa trải nghiệm trên các thiết bị di động. Mục tiêu là mang lại sự hoàn hảo trên mọi màn hình. Hãy chờ đón những bản cập nhật tiếp theo nhé!
+
+---
+
+## ❗️ Lưu ý nhỏ:
